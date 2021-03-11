@@ -12,8 +12,9 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/main.css">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
@@ -21,19 +22,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body class="body">
-    <div class="header-icon"> 
+    <div class="header-icon">
         <!-- Use any element to open the sidenav -->
-        <span class="menu-icon" onclick="openNav()">
+        <span class="menu-icon  d-block d-sm-none" onclick="openNav()">
             <div></div>
             <div></div>
             <div></div>
         </span>
-        <div id="mySidenav" class="sidenav">
+        <div id="mySidenav" class="sidenav ">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+            <a href="javascript:void(0)">मुख्य पृष्ठ</a>
             <!-- वेदों के लिए  -->
             <button class="dropdown-btn">वेद
                 <i class="fa fa-caret-down"></i>
@@ -43,6 +41,16 @@
                 <a href="#">यजुर्वेद</a>
                 <a href="#">सामवेद</a>
                 <a href="#">अथर्ववेद</a>
+            </div>
+            <!-- ब्राह्मण ग्रंथो के लिए -->
+            <button class="dropdown-btn">ब्राह्मण ग्रन्थ
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container brahman-granth" lang="hi">
+                <a href="#">ऐतरेय ब्राह्मण</a>
+                <a href="#">कौषीतकि ब्राह्मण (शांखायन ब्राह्मण)</a>
+                <a href="#"></a>
+                <a href="#">गोपथ ब्राह्मण</a>
             </div>
             <!-- उपनिषद के लिए -->
             <button class="dropdown-btn">उपनिषद
@@ -60,6 +68,20 @@
                 <a href="#">श्वेताश्वतरोपनिषद</a>
                 <a href="#">बृहदारण्यकोपनिषद</a>
                 <a href="#">छान्दोग्योपनिषद</a>
+            </div>
+        </div>
+        <div class="navbars d-none d-sm-block">
+            <div><a href="#home">Home</a></div>
+            <div><a href="#news">News</a></div>
+            <div class="dropdown-menus">
+                <button class="dropbtn-menu">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content-menu">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
             </div>
         </div>
         <div class="settings-icon">
@@ -92,15 +114,19 @@
     </div>
     <div class="header">
         <div class="title" style="user-select:none;">
-            <span lang="en" class="english">Ved-Mantavya</span>
             <span lang="hi" class="hindi">वेद मन्तव्य</span>
         </div>
         
         <div class="search-bar">
             <input type="text" placeholder="Search..." >
             <input type="submit" value="Go">
-            
         </div>
+    </div>
+    <div class="main-body">
+        <div class="vedas"><a href="rigved.asp"> ऋग्वेद</a></div>
+        <div class="vedas"><a href=""> यजुर्वेद</a></div>
+        <div class="vedas"><a href=""> सामवेद</a></div>
+        <div class="vedas"><a href=""> अथर्ववेद</a></div>
     </div>
     <script src="js/main.js"></script>
 </body>
