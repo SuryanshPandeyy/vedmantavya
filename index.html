@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ved-Mantavya</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css"
@@ -14,7 +21,47 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body class="body">
-    <div class="header-icon">
+    <div class="header-icon"> 
+        <!-- Use any element to open the sidenav -->
+        <span class="menu-icon" onclick="openNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </span>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+            <!-- वेदों के लिए  -->
+            <button class="dropdown-btn">वेद
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container ved" lang="hi">
+                <a href="#">ऋग्वेद</a>
+                <a href="#">यजुर्वेद</a>
+                <a href="#">सामवेद</a>
+                <a href="#">अथर्ववेद</a>
+            </div>
+            <!-- उपनिषद के लिए -->
+            <button class="dropdown-btn">उपनिषद
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container upanishad" lang="hi">
+                <a href="#">इशोपनिषद</a>
+                <a href="#">केनोपनिषद</a>
+                <a href="#">कठोपनिषद</a>
+                <a href="#">प्रश्नोपनिषद</a>
+                <a href="#">मुण्डकोपनिषद</a>
+                <a href="#">माण्डुक्योपनिषद</a>
+                <a href="#">ऐतरेयोपनिषद</a>
+                <a href="#">तैतरियोपनिषद</a>
+                <a href="#">श्वेताश्वतरोपनिषद</a>
+                <a href="#">बृहदारण्यकोपनिषद</a>
+                <a href="#">छान्दोग्योपनिषद</a>
+            </div>
+        </div>
         <div class="settings-icon">
             <i class="bi bi-gear" onclick="document.getElementById('id01').style.display='block'"></i>
         </div>
@@ -44,7 +91,7 @@
         </div>
     </div>
     <div class="header">
-        <div class="title">
+        <div class="title" style="user-select:none;">
             <span lang="en" class="english">Ved-Mantavya</span>
             <span lang="hi" class="hindi">वेद मन्तव्य</span>
         </div>

@@ -4,6 +4,7 @@
 }
 .body{
     background: rgb(0, 136, 255);
+    overflow: hidden;
 }
 .body.lang:lang(hi){
     display: block;
@@ -30,6 +31,7 @@
 }
 .hindi.lang:lang(hi){
     display: block;
+    letter-spacing: 0px;
 }
 .english.lang:lang(en){
     display: none;
@@ -74,8 +76,13 @@
     align-items: center;
     justify-content: center;
 }
+.header-icon{
+    width: 100%;
+}
 .settings-icon {
+    float: right;
     font-size: 40px;
+    cursor: pointer;
 }
 
 
@@ -164,6 +171,7 @@
     flex-direction: row;
     justify-self: flex-end;
     align-self: flex-end;
+    cursor: pointer;
 }
 
 .ellipse {
@@ -186,4 +194,130 @@
 
 .toggle-circle.move {
     transform: translate(25px);
+}
+.menu-icon{
+    position: absolute;
+    padding: 20px;
+    cursor: pointer;
+}
+.menu-icon div {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    scrollbar-width: none;
+    scrollbar-width: thin;
+    overflow-y: auto;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #c5c5c5;
+    display: block;
+    transition: 0.3s;
+}
+.dropdown-btn{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    outline-width: 0;
+    
+}
+.dropdown-btn:focus{
+    outline: none;
+    outline-width: 0;
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover,
+.dropdown-btn:hover {
+    text-decoration: none;
+    color: #f1f1f1; 
+}
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    position: absolute;
+    display: none;
+    background-color: #494949;
+    padding-left: 8px;
+    width: calc(100% + 0px);
+    border: 2px solid white;
+    box-sizing: border-box;/* So the width will be 100% + 17px */
+}
+.sidenav::-webkit-scrollbar{
+    display: none;
+    overflow-y: auto;
+}
+.sidenav::scrollbar{
+    display: none;
+    overflow-y: auto;
+}
+
+.ved{
+    z-index: 2;
+    background-color: #1a1a1a;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
 }
