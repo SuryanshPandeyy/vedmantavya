@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.body{
+    background: rgb(0, 136, 255);
+}
+.body.lang:lang(hi){
+    display: block;
+}
+.header{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    margin:100px 0 50px 0;
+}
+.title span{
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+.title .hindi{
+    display: none;
+}
+.hindi.lang:lang(hi){
+    display: block;
+}
+.english.lang:lang(en){
+    display: none;
+}
+.search-bar input[type="text"]{
+    width: 350px;
+    height: 40px;
+    border-radius:20px;
+    border: 0px solid white;
+    padding: 0 10px;
+    font-size:15px;
+}
+.search-bar input[type="submit"]{
+    background: white;
+    border: 0px solid white;
+    padding:13px;
+    margin:0 0 0 5px;
+    border-radius:50%;
+    font-size:15px;
+    font-weight: bold;
+    color: rgb(0, 136, 255);
+    cursor: pointer;
+}
+.search-bar input[type="text"]:focus,
+.search-bar input[type="submit"]:focus{
+    outline-width: 0;
+    outline: none;
+}
+.search-bar input[type="text"]::before:focus {
+    content: '';
+    width: 100%;
+    height: 40px;
+    background: red;
+    position: relative;
+    top: 10px;
+}
+.search-bar input[type=text]::placeholder{
+    font-size:15px;
+    vertical-align: middle;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.settings-icon {
+    font-size: 40px;
+}
+
+
+.bi-gear {
+    float: left;
+    transition: all 0.2s linear;
+    margin: 10px;
+}
+.bi-gear.rotate {
+    transform: rotate(90deg);
+}
+.container-box {
+    display: flex;
+    padding-top: 10px;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.62);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-box {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefefe;
+    position: relative;
+    border-radius: 20px;
+    margin: 0% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: fit-content;
+    /* Could be more or less, depending on screen size */
+}
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.toggle {
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.ellipse {
+    width: 55px;
+    border-radius: 20px;
+    height: 20px;
+    transform: scale(0.7);
+    background: black;
+}
+
+.toggle-circle {
+    position: relative;
+    left: 28px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: black;
+    transition: all 0.2s linear;
+}
+
+.toggle-circle.move {
+    transform: translate(25px);
+}
