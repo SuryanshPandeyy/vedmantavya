@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>वेद</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
+
 </head>
 <body>
     <div class="flex">
     <button class="tablink" onclick="openPage('mainPage', this, 'red')" id="defaultOpen"> मुख्य पृष्ठ</button>
     <button class="tablink" onclick="openPage('rigved', this, 'red')" id="rigveda" name="rigveda">ऋग्वेद</button>
-    <button class="tablink" onclick="openPage('yajurved', this, 'green')" id="yajurveda">यजुर्वेद</button>
+    <button class="tablink" onclick="openPage('yajurved', this, 'green')" id="yajurveda" name="yajurveda">यजुर्वेद</button>
     <button class="tablink" onclick="openPage('samved', this, 'blue')" id="samveda">सामवेद</button>
     <button class="tablink" onclick="openPage('atharvaved', this, 'orange')" id="atharvaveda">अथर्ववेद</button>
     </div>
@@ -40,7 +42,8 @@
         <h3>अथर्ववेद</h3>
         <p>Who we are and what we do.</p>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
