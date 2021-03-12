@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>वेद</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="flex">
+    <button class="tablink" onclick="openPage('mainPage', this, 'red')" id="defaultOpen"> मुख्य पृष्ठ</button>
+    <button class="tablink" onclick="openPage('rigved', this, 'red')" id="rigveda" name="rigveda">ऋग्वेद</button>
+    <button class="tablink" onclick="openPage('yajurved', this, 'green')" id="yajurveda">यजुर्वेद</button>
+    <button class="tablink" onclick="openPage('samved', this, 'blue')" id="samveda">सामवेद</button>
+    <button class="tablink" onclick="openPage('atharvaved', this, 'orange')" id="atharvaveda">अथर्ववेद</button>
+    </div>
+    
+    <div id="mainPage" class="tabcontent">
+        <h3>मुख्य पृष्ठ </h3>
+        <p>Home is where the heart is..</p>
+    </div>
+
+    <div id="rigved" name="rigved" class="tabcontent">
+        <h3>ऋग्वेद</h3>
+        <p>Home is where the heart is..</p>
+    </div>
+    
+    <div id="yajurved" class="tabcontent">
+        <h3>यजुर्वेद</h3>
+        <p>Some news this fine day!</p>
+    </div>
+    
+    <div id="samved" class="tabcontent">
+        <h3>सामवेद</h3>
+        <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+    
+    <div id="atharvaved" class="tabcontent">
+        <h3>अथर्ववेद</h3>
+        <p>Who we are and what we do.</p>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
