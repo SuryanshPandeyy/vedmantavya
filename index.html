@@ -12,14 +12,19 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
+
     
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
 </head>
 <body class="body">
     <div class="header-icon">
@@ -155,11 +160,17 @@
         </div>
     </div>
     <div class="main-body">
-        <div class="vedas"><a href="ved/ved.html#rigveda" role="tab" aria-controls="rigved"> ऋग्वेद</a></div>
-        <div class="vedas"><a data-toggle="" role="tab" href="ved/ved.html#yajurveda" aria-controls="yajurved"> यजुर्वेद</a></div>
-        <div class="vedas"><a data-toggle="samved" role="tab" href="ved/ved.html#samved" aria-controls="samved" > सामवेद</a></div>
-        <div class="vedas"><a data-toggle="atharvaved" role="tab" href="ved/ved.html#atharvaved" aria-controls="atharvaved" > अथर्ववेद</a></div>
+        <div class="vedas" onclick="javascript:location.href='ved/ved.html #rigveda'">ऋग्वेद</div>
+        <div class="vedas"  onclick="javascript:location.href='ved/ved.html#yajurved'">यजुर्वेद</div>
+        <div class="vedas"  onclick="javascript:location.href='ved/ved.html#samved'">सामवेद</div>
+        <div class="vedas"  onclick="javascript:location.href='ved/ved.html#atharvaved'">अथर्ववेद</div>
     </div>
+    <script>
+        function go(){
+            location.href("ved/ved.html");
+        }
+    </script>
+    
     <script src="js/main.js"></script>
 
 </body>
