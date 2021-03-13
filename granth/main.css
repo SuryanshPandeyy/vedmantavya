@@ -20,6 +20,7 @@ html {
     align-content: space-between;
     justify-items: stretch;
 }
+
 .tablink {
     background-color: #555;
     color: white;
@@ -27,7 +28,7 @@ html {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 15px 0%;
     font-size: 17px;
     width: 100%;
 }
@@ -40,9 +41,16 @@ html {
 .tabcontent {
     color: white;
     display: none;
-    padding: 100px 20px;
-    height: 1100%;
+    padding: 50px 20px;
+    height: 100%;
+    flex-direction: column;
 }
+.tabcontent span{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
 .tabcontent::-webkit-scrollbar {
     display: none;
     overflow-y: auto;
@@ -52,7 +60,10 @@ html {
     display: none;
     overflow-y: auto;
 }
+
 #mainPage {
+    justify-content:  center;
+    align-items: center;
     background-color: red;
 }
 
@@ -70,4 +81,47 @@ html {
 
 #atharvaved {
     background-color: orange;
+}
+.search-bar{
+    text-align: center;
+    width: 100%;
+}
+
+
+.search-bar input[type="text"] {
+    width: fit-content;
+    height: 40px;
+    margin: auto;
+    border-radius: 10px;
+    border: 0px solid white;
+    padding: 0 10px;
+    font-size: 15px;
+}
+
+.search-bar input[type="submit"] {
+    background: white;
+    border: 0px solid white;
+    padding: 13px;
+    margin: auto;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(0, 136, 255);
+    cursor: pointer;
+}
+
+.search-bar input[type="text"]:focus,
+.search-bar input[type="submit"]:focus {
+    outline-width: 10;
+    outline: none;
+}
+
+.search-bar input[type=text]::placeholder {
+    font-size: 15px;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
 }

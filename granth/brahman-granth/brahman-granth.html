@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,41 +15,49 @@
         crossorigin="anonymous"></script>
 
 </head>
+
 <body>
     <div class="flex">
-    <button class="tablink active" onclick="openPage('mainPage', this, 'red')" id="defaultOpen"> मुख्य पृष्ठ</button>
-    <button class="tablink active" onclick="openPage('rigved', this, 'red')" id="rigveda" name="rigveda">ऋग्वेद</button>
-    <button class="tablink active" onclick="openPage('yajurved', this, 'green')" id="yajurveda" name="yajurveda">यजुर्वेद</button>
-    <button class="tablink active" onclick="openPage('samved', this, 'blue')" id="samveda">सामवेद</button>
-    <button class="tablink active" onclick="openPage('atharvaved', this, 'orange')" id="atharvaveda">अथर्ववेद</button>
+        <button class="tablink active" onclick="openPage('mainPage', this, 'red')" id="defaultOpen"> मुख्य पृष्ठ</button>
+
+        <button class="tablink active" onclick="openPage('rigved', this, 'red')" id="rigveda" name="rigveda">ऐतरेय ब्राह्मण</button>
+
+        <button class="tablink active" onclick="openPage('yajurved', this, 'green')" id="yajurveda" name="yajurveda">कौषीतकि ब्राह्मण</button>
+
+        <button class="tablink active" onclick="openPage('samved', this, 'blue')" id="samveda">शाङ्खायन ब्राह्मणः</button>
+
+        <button class="tablink active" onclick="openPage('atharvaved', this, 'orange')" id="atharvaveda">माध्यन्दिन शतपथ ब्राह्मण</button>
+
+        <button class="tablink active" onclick="openPage('atharvaved', this, 'orange')" id="atharvaveda">काण्व शतपथ ब्राह्मण</button>
     </div>
-    
+
     <div id="mainPage" class="tabcontent">
         <h3>मुख्य पृष्ठ </h3>
         <p>Home is where the heart is..</p>
     </div>
 
-    <div id="rigved" data-toggle="rigveda" name="rigved" class="tabcontent">
-        <h3>ऋग्वेद</h3>
+    <div id="rigved" name="rigved" class="tabcontent">
+        <h3>ऐतरेय ब्राह्मण</h3>
         <p>Home is where the heart is..</p>
     </div>
-    
-    <div id="yajurved" class="tabcontent">
-        <h3>यजुर्वेद</h3>
+
+    <div id="yajurved" name="yajurved" class="tabcontent">
+        <h3>कौषीतकि ब्राह्मण</h3>
         <p>Some news this fine day!</p>
     </div>
-    
-    <div id="samved" class="tabcontent">
-        <h3>सामवेद</h3>
+
+    <div id="samved" name="samved" class="tabcontent">
+        <h3>शाङ्खायन ब्राह्मणः</h3>
         <p>Get in touch, or swing by for a cup of coffee.</p>
     </div>
-    
-    <div id="atharvaved" class="tabcontent">
-        <h3>अथर्ववेद</h3>
+
+    <div id="atharvaved" name="atharvaved" class="tabcontent">
+        <h3>माध्यन्दिन शतपथ ब्राह्मण</h3>
         <p>Who we are and what we do.</p>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
 </body>
+
 </html>
