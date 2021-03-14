@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>वेद</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../main.css">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
@@ -16,8 +19,8 @@
 </head>
 <body>
     <div class="flex">
-        <button class="tablink active" onclick="openPage('mainPage', this, 'red')" id="defaultOpen"> मुख्य पृष्ठ</button>
-        <button class="tablink active" onclick="openPage('rigved', this, 'red')" id="rigveda" name="rigveda">ऋग्वेद</button>
+        <button class="tablink active" onclick="openPage('mainPage', this, 'red')" > मुख्य पृष्ठ</button>
+        <button class="tablink active" onclick="openPage('rigved', this, 'red')" id="defaultOpen" name="rigveda">ऋग्वेद</button>
         <button class="tablink active" onclick="openPage('yajurved', this, 'green')" id="yajurveda" name="yajurveda">यजुर्वेद</button>
         <button class="tablink active" onclick="openPage('samved', this, 'blue')" id="samveda">सामवेद</button>
         <button class="tablink active" onclick="openPage('atharvaved', this, 'orange')" id="atharvaveda">अथर्ववेद</button>
@@ -34,23 +37,102 @@
     </div>
 
     <div id="rigved" name="rigved" class="tabcontent">
-        <h3>ऋग्वेद</h3>
-        <p>Home is where the heart is..</p>
+
+        <div class="boxs">
+            <img src="../img/rigved.png" alt="rigved" class="rigved-img"/>
+            <div class="flex-text">
+                <i class="fa fa-chevron-circle-right"></i>
+                <div>
+                    <p><span> वेद: ऋग्वेद </span><span>ऋषि: अग्नि</span></p>
+                </div>
+                <i class="fa fa-chevron-circle-right"></i> 
+                <div>
+                    <p><span> मण्डल: 10 </span><span>सूक्त: 1028</span></p>
+                </div>
+                <i class="fa fa-chevron-circle-right"></i> 
+                <div>
+                    <p><span> अष्टक: 8 </span><span>अध्याय: 64</span><span>वर्ग: 2024</span></p>
+                </div>
+                <i class="fa fa-chevron-circle-right"></i>
+                <div>
+                    <p><span> मण्डल: 10 </span><span>अनुवाक: 85</span></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="description">
+            <h2>ऋग्वेद सम्बन्धी जानकारी</h2>
+            <p>
+                
+            </p>
+        </div>
+
+
     </div>
     
     <div id="yajurved" name="yajurved" class="tabcontent">
-        <h3>यजुर्वेद</h3>
-        <p>Some news this fine day!</p>
+        <div class="boxs">
+            <img src="../img/rigved.png" alt="rigved" class="rigved-img" />
+            <div class="flex-text">
+                <i class="fa fa-chevron-circle-right"></i>
+                <div>
+                    <p><span> वेद: यजुर्वेद </span><span>ऋषि: वायु</span></p>
+                </div>
+                <i class="fa fa-chevron-circle-right"></i>
+                <div>
+                    <p><span>अध्याय: 40 </span><span>मन्त्र: 1975</span></p>
+                </div>
+            </div>
+        </div>
     </div>
     
     <div id="samved" name="samved" class="tabcontent">
-        <h3>सामवेद</h3>
-        <p>Get in touch, or swing by for a cup of coffee.</p>
+        <div class="boxs">
+            <img src="../img/rigved.png" alt="rigved" class="rigved-img" />
+            <div class="flex-text">
+                <i class="fa fa-chevron-circle-right"></i>
+                <div>
+                    <p><span> वेद: सामवेद </span><span>ऋषि: आदित्य</span></p>
+                </div>
+                <i class="fa fa-chevron-circle-right"></i>
+                <div>
+                    <p><span> मण्डल: 10 </span><span>सूक्त: 1028</span></p>
+                </div>
+                <i class="fa fa-chevron-circle-right"></i>
+                <div>
+                    <p><span> अष्टक: 8 </span><span>अध्याय: 64</span><span>वर्ग: 2024</span></p>
+                </div>
+                <i class="fa fa-chevron-circle-right"></i>
+                <div>
+                    <p><span> मण्डल: 10 </span><span>अनुवाक: 85</span></p>
+                </div>
+            </div>
+        </div>
     </div>
     
     <div id="atharvaved" name="atharvaved" class="tabcontent">
-        <h3>अथर्ववेद</h3>
-        <p>Who we are and what we do.</p>
+        <div class="boxs">
+            <img src="../img/rigved.png" alt="rigved" class="rigved-img" />
+            <div class="flex-text">
+                <i class="fa fa-chevron-circle-right"></i>
+                <div>
+                    <p><span> वेद: अथर्ववेद </span><span>ऋषि: अग्नि</span></p>
+                </div>
+                <i class="fa fa-chevron-circle-right"></i>
+                <div>
+                    <p><span> मण्डल: 10 </span><span>सूक्त: 1028</span></p>
+                </div>
+                <i class="fa fa-chevron-circle-right"></i>
+                <div>
+                    <p><span> अष्टक: 8 </span><span>अध्याय: 64</span><span>वर्ग: 2024</span></p>
+                </div>
+                <i class="fa fa-chevron-circle-right"></i>
+                <div>
+                    <p><span> मण्डल: 10 </span><span>अनुवाक: 85</span></p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
