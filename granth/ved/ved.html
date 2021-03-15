@@ -21,10 +21,10 @@
 </head>
 <body>
     <div class="flex">
-        <button class="tablink active" onclick="openPage('mainPage', this, 'red')"  > मुख्य पृष्ठ</button>
+        <button class="tablink active" onclick="openPage('mainPage', this, 'red')" id="defaultOpen"> मुख्य पृष्ठ</button>
         <button class="tablink active" onclick="openPage('rigved', this, 'red')" id="rigveda" name="rigveda">ऋग्वेद</button>
         <button class="tablink active" onclick="openPage('yajurved', this, 'green')" id="yajurveda" name="yajurveda">यजुर्वेद</button>
-        <button class="tablink active" onclick="openPage('samved', this, 'blue')" id="defaultOpen">सामवेद</button>
+        <button class="tablink active" onclick="openPage('samved', this, 'blue')" id="samveda">सामवेद</button>
         <button class="tablink active" onclick="openPage('atharvaved', this, 'orange')" id="atharvaveda">अथर्ववेद</button>
     </div>
     
@@ -41,7 +41,7 @@
     <div id="rigved" name="rigved" class="tabcontent">
         <div>
             <div class="boxs">
-                <img src="../img/rigveda.png" alt="rigved" class="rigved-img" />
+                <img src="../img/rigveda.png" alt="rigved" class="ved-img" />
                 <div class="flex-text">
                     <div class="info_box">
                         <p>
@@ -104,7 +104,7 @@
             </div>
         </div>
 
-        <div class="rig-search-bar">
+        <div class="ved-search-bar">
             <input type="text" placeholder="ऋग्वेद में खोजें...">
             <input type="submit" value="Go">
         </div>
@@ -113,7 +113,7 @@
             <div class="headline"><h3>मन्त्र खोजें</h3></div>     
             <form action="" method="get" role="search-mantra" class="form-inline">
                 <div class="col-md-4">
-                    <select name="rig-mandal" id="rig-mandal" class="1-10">
+                    <select name="rig-mandal" id="rig" class="1-10">
                         <option value="select" selected disabled>मण्डल चुनें</option>
                         <script>
                             $(function () {
@@ -124,12 +124,12 @@
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <select name="rig-sukt" id="rig-sukt">
+                    <select name="rig-sukt" id="rig">
                         <option value="selected" disabled selected>सूक्त चुनें</option>
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <select name="rig-mantra" id="rig-mantra">
+                    <select name="rig-mantra" id="rig">
                         <option value="selected" disabled selected>मन्त्र चुनें</option>
                     </select>
                 </div>
@@ -142,7 +142,7 @@
     <div id="yajurved" name="yajurved" class="tabcontent">
         <div>
             <div class="boxs">
-                <img src="../img/rigveda.png" alt="rigved" class="rigved-img" />
+                <img src="../img/rigveda.png" alt="rigved" class="ved-img" />
                 <div class="flex-text">
                     <div class="info_box">
                         <p>
@@ -179,7 +179,7 @@
                 </p>
             </div>
         </div>
-        <div class="rig-search-bar">
+        <div class="ved-search-bar">
             <input type="text" placeholder="यजुर्वेद में खोजें...">
             <input type="submit" value="Go">
         </div>
@@ -190,7 +190,7 @@
             </div>
             <form action="" method="get" role="search-mantra" class="form-inline">
                 <div class="col-md-4">
-                    <select name="rig-mandal" id="rig-mandal" class="1-40">
+                    <select name="yajurved" id="yaju" class="1-40">
                         <option value="select" selected disabled>अध्याय चुनें</option>
                         <script>
                             $(function () {
@@ -201,7 +201,7 @@
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <select name="rig-mantra" id="rig-mantra">
+                    <select name="yajurved" id="yaju">
                         <option value="selected" disabled selected>मन्त्र चुनें</option>
                     </select>
                 </div>
@@ -213,7 +213,7 @@
     <div id="samved" name="samved" class="tabcontent">
         <div>
             <div class="boxs">
-                <img src="../img/rigveda.png" alt="rigved" class="rigved-img" />
+                <img src="../img/rigveda.png" alt="samved" class="ved-img" />
                 <div class="flex-text">
                     <div class="info_box">
                         <p>
@@ -249,8 +249,8 @@
                 </p>
             </div>
         </div>
-        <div class="rig-search-bar">
-            <input type="text" placeholder="ऋग्वेद में खोजें...">
+        <div class="ved-search-bar">
+            <input type="text" placeholder="सामवेद में खोजें...">
             <input type="submit" value="Go">
         </div>
         
@@ -260,7 +260,7 @@
             </div>
             <form action="" method="get" role="search-mantra" class="form-inline">
                 <div class="col-md-4">
-                    <select name="rig-mandal" id="rig-mandal">
+                    <select name="saam" id="saam">
                         <option value="selected" disabled selected>मण्डल चुनें</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -275,12 +275,12 @@
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <select name="rig-sukt" id="rig-sukt">
+                    <select name="rig-sukt" id="saam">
                         <option value="selected" disabled selected>सूक्त चुनें</option>
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <select name="rig-mantra" id="rig-mantra">
+                    <select name="rig-mantra" id="saam">
                         <option value="selected" disabled selected>मन्त्र चुनें</option>
                     </select>
                 </div>
@@ -293,7 +293,7 @@
     <div id="atharvaved" name="atharvaved" class="tabcontent">
         <div>
             <div class="boxs">
-                <img src="../img/rigveda.png" alt="rigved" class="rigved-img" />
+                <img src="../img/rigveda.png" alt="rigved" class="ved-img" />
                 <div class="flex-text">
                     <div class="info_box">
                         <p>
@@ -328,8 +328,8 @@
                 </p>
             </div>
         </div>
-        <div class="rig-search-bar">
-            <input type="text" placeholder="ऋग्वेद में खोजें...">
+        <div class="ved-search-bar">
+            <input type="text" placeholder="अथर्ववेद में खोजें...">
             <input type="submit" value="Go">
         </div>
         
@@ -339,7 +339,7 @@
             </div>
             <form action="" method="get" role="search-mantra" class="form-inline">
                 <div class="col-md-4">
-                    <select name="rig-mandal" id="rig-mandal">
+                    <select name="atharva" id="atharva">
                         <option value="selected" disabled selected>मण्डल चुनें</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -354,12 +354,12 @@
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <select name="rig-sukt" id="rig-sukt">
+                    <select name="rig-sukt" id="atharva">
                         <option value="selected" disabled selected>सूक्त चुनें</option>
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <select name="rig-mantra" id="rig-mantra">
+                    <select name="rig-mantra" id="atharva">
                         <option value="selected" disabled selected>मन्त्र चुनें</option>
                     </select>
                 </div>
