@@ -12,5 +12,19 @@ function openPage(pageName, elmnt, color) {
     elmnt.style.backgroundColor = color;
 }
 
+function openPage2(pageName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink-aarsh");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "flex";
+    elmnt.style.backgroundColor = color;
+}
+
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click(); 

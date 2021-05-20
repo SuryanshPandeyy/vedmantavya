@@ -15,14 +15,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <!--------jquery--------------->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        
 
 </head>
 <body>
     <div class="flex">
-        <button class="tablink active" onclick="openPage('mainPage', this, 'red')" id="defaultOpen"> मुख्य पृष्ठ</button>
-        <button class="tablink active" onclick="openPage('rigved', this, 'red')" id="rigveda" name="rigveda">ऋग्वेद</button>
+        <button class="tablink active" onclick="openPage('mainPage', this, 'red')" > मुख्य पृष्ठ</button>
+        <button class="tablink active" onclick="openPage('rigved', this, 'red')" id="defaultOpen" id="rigveda" name="rigveda">ऋग्वेद</button>
         <button class="tablink active" onclick="openPage('yajurved', this, 'green')" id="yajurveda" name="yajurveda">यजुर्वेद</button>
         <button class="tablink active" onclick="openPage('samved', this, 'blue')" id="samveda">सामवेद</button>
         <button class="tablink active" onclick="openPage('atharvaved', this, 'orange')" id="atharvaveda">अथर्ववेद</button>
@@ -110,33 +115,38 @@
         </div>
 
         <div class="option-mantra">
-            <div class="headline"><h3>मन्त्र खोजें</h3></div>     
-            <form action="" method="get" role="search-mantra" class="form-inline">
+            <div class="headline"><h3>मन्त्र खोजें</h3></div>
+            <form role="search-mantra" class="form-inline">
                 <div class="col-md-4">
-                    <select name="rig-mandal" id="rig" class="1-10">
+                    <select name="rig-mandal" id="rig-mandal" class="1-10 rig rig-mandal" onchange="change_sukt(this)">
                         <option value="select" selected disabled>मण्डल चुनें</option>
                         <script>
                             $(function () {
                                 var $select = $(".1-10");
-                                for (i = 1; i <= 10; i++) { $select.append($('<option value= ' + i + '></option>').val(i).html(i)) }
+                                for (i = 1; i <= 10; i++) { $select.append($('<option value='+ i +'></option>').val(i).html(i)) }
                             });
                         </script>
                     </select>
                 </div>
-                <div class="col-md-4">
-                    <select name="rig-sukt" id="rig">
-                        <option value="selected" disabled selected>सूक्त चुनें</option>
+
+                <div class="col-md-4" >
+                    <!-- sukt-->
+                    <select id="rig-sukt" class="option rig-show rig-sukt rig"  onchange="change_mantra(this)">
+                        <option disabled selected>सूक्त चुनें</option>
                     </select>
                 </div>
+
                 <div class="col-md-4">
-                    <select name="rig-mantra" id="rig">
-                        <option value="selected" disabled selected>मन्त्र चुनें</option>
+                    <select name="rig-mantra" id="rig-mantra" class="rig rig-mantra"  onchange="show_mantra(this)">
+                        <option disabled selected>मन्त्र चुनें</option>
                     </select>
                 </div>
             </form>
         </div>
     </div>
-    
+    <p id="demo">
+a
+    </p>
 
 <!-- yajurved -->
     <div id="yajurved" name="yajurved" class="tabcontent">
@@ -190,7 +200,7 @@
             </div>
             <form action="" method="get" role="search-mantra" class="form-inline">
                 <div class="col-md-4">
-                    <select name="yajurved" id="yaju" class="1-40">
+                    <select name="yajurved" id="yaju-adhyay" class="1-40 yaju">
                         <option value="select" selected disabled>अध्याय चुनें</option>
                         <script>
                             $(function () {
@@ -201,7 +211,7 @@
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <select name="yajurved" id="yaju">
+                    <select name="yajurved" id="yaju-mantra" class="yaju">
                         <option value="selected" disabled selected>मन्त्र चुनें</option>
                     </select>
                 </div>
@@ -260,7 +270,7 @@
             </div>
             <form action="" method="get" role="search-mantra" class="form-inline">
                 <div class="col-md-4">
-                    <select name="saam" id="saam">
+                    <select name="saam" id="saam-" class="saam">
                         <option value="selected" disabled selected>मण्डल चुनें</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -275,12 +285,12 @@
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <select name="rig-sukt" id="saam">
+                    <select name="rig-sukt" id="saa" class="saam">
                         <option value="selected" disabled selected>सूक्त चुनें</option>
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <select name="rig-mantra" id="saam">
+                    <select name="rig-mantra" id="sa" class="saam">
                         <option value="selected" disabled selected>मन्त्र चुनें</option>
                     </select>
                 </div>
@@ -339,7 +349,7 @@
             </div>
             <form action="" method="get" role="search-mantra" class="form-inline">
                 <div class="col-md-4">
-                    <select name="atharva" id="atharva">
+                    <select name="atharva" id="atharva-kaand" class="atharva">
                         <option value="selected" disabled selected>मण्डल चुनें</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -354,12 +364,12 @@
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <select name="rig-sukt" id="atharva">
+                    <select name="rig-sukt" id="atharva-sukt" class="atharva">
                         <option value="selected" disabled selected>सूक्त चुनें</option>
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <select name="rig-mantra" id="atharva">
+                    <select name="rig-mantra" id="atharva-mantra" class="atharva">
                         <option value="selected" disabled selected>मन्त्र चुनें</option>
                     </select>
                 </div>
@@ -368,6 +378,6 @@
     </div>
     
     <script type="text/javascript" src="../main.js"></script>
-
+    <script type="text/javascript" src="rig-sukt.js"></script>
 </body>
 </html>

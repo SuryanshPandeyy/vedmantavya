@@ -1,10 +1,18 @@
 *{
     margin: 0;
     padding: 0;
+    font-size: 1.5rem;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+    --black_color: rgb(0, 0, 0);
+    --white_color: rgb(255, 255, 255);
+    --white_bg: #fff;
 }
 .body{
-    background:linear-gradient(to right, rgb(238, 85, 58), rgb(234, 178, 153));
-    overflow: hidden;
+    background:linear-gradient(to right, rgb(255,192,158), rgb(255,244,232));
 }
 .body.lang:lang(hi){
     display: block;
@@ -18,11 +26,11 @@
     align-items: center;
 }
 .title{
-    margin:100px 0 50px 0;
+    margin:10rem 0 5rem 0;
 }
 .title span{
-    color: white;
-    font-size: 35px;
+    color: var(--black_color);
+    font-size: 3.5rem;
     font-weight: bold;
 }
 .search-bar input{
@@ -30,23 +38,23 @@
 }
 .search-bar input[type="text"]{
     min-width: fit-content;
-    max-width: 500px;
-    height: 40px;
+    max-width: 50rem;
+    height: 4rem;
     margin: auto;
-    border-radius:20px;
-    border: 0px solid white;
-    padding: 0 10px;
-    font-size:15px;
+    border-radius:2rem;
+    border: 0px solid #fff;
+    padding: 0 1rem;
+    font-size:1.5rem;
 }
 .search-bar input[type="submit"]{
     width: fit-content;
     height: fit-content;
-    background: white;
-    border: 0px solid white;
-    padding:13px;
+    background: var(--white_bg);
+    border: 0rem solid #fff;
+    padding:1.3rem;
     margin: auto;
     border-radius:50%;
-    font-size:15px;
+    font-size:1.5rem;
     font-weight: bold;
     color: rgb(0, 136, 255);
     cursor: pointer;
@@ -57,7 +65,7 @@
     outline: none;
 }
 .search-bar input[type=text]::placeholder{
-    font-size:15px;
+    font-size:1.5rem;
     vertical-align: middle;
     display:flex;
     flex-direction: row;
@@ -75,7 +83,7 @@
 .settings-icon {
     justify-self: flex-end;
     align-self:flex-end;
-    font-size: 40px;
+    font-size: 4rem;
     cursor: pointer;
 }
 
@@ -83,14 +91,15 @@
 .bi-gear {
     float: left;
     transition: all 0.2s linear;
-    margin: 10px;
+    margin: 1rem;
+    font-size: 2.5rem;
 }
 .bi-gear.rotate {
     transform: rotate(90deg);
 }
 .container-box {
     display: flex;
-    padding-top: 10px;
+    padding-top: 1rem;
 }
 
 
@@ -115,22 +124,22 @@
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.62);
     /* Black w/ opacity */
-    padding-top: 60px;
+    padding-top: 6rem;
 }
 
 /* Modal Content/Box */
 .modal-box {
-    padding: 20px;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fefefe;
     position: relative;
-    border-radius: 20px;
+    border-radius: 2rem;
     margin: 0% auto 15% auto;
     /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
+    border: .1rem solid #888;
     width: fit-content;
     /* Could be more or less, depending on screen size */
 }
@@ -169,36 +178,36 @@
 }
 
 .ellipse {
-    width: 55px;
-    border-radius: 20px;
-    height: 20px;
+    width: 5.5rem;
+    border-radius: 2rem;
+    height: 2rem;
     transform: scale(0.7);
     background: black;
 }
 
 .toggle-circle {
     position: relative;
-    left: 28px;
-    width: 20px;
-    height: 20px;
+    left: 2.8rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     background: black;
     transition: all 0.2s linear;
 }
 
 .toggle-circle.move {
-    transform: translate(25px);
+    transform: translate(2.5rem);
 }
 .menu-icon{
     position: relative;
-    padding: 20px;
+    padding: 2rem;
     cursor: pointer;
 }
 .menu-icon div {
-    width: 35px;
-    height: 5px;
+    width: 3.5rem;
+    height: .5rem;
     background-color: black;
-    margin: 6px 0;
+    margin: .6rem 0;
 }
 /* The side navigation menu */
 .sidenav {
@@ -220,7 +229,7 @@
     scrollbar-width: thin;
     overflow-y: auto;
     /* Disable horizontal scroll */
-    padding-top: 60px;
+    padding-top: 6rem;
     /* Place content 60px from the top */
     transition: 0.5s;
     /* 0.5 second transition effect to slide in the sidenav */
@@ -229,17 +238,17 @@
 
 /* The navigation menu links */
 .sidenav a{
-    padding: 6px 8px 6px 16px;
+    padding: .6rem .8rem .6rem 1.6rem;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 2rem;
     color: #c5c5c5;
     display: block;
     transition: 0.3s;
 }
 .dropdown-btn{
-    padding: 6px 8px 6px 16px;
+    padding: .6rem .8rem .6rem 1.6rem;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 2rem;
     color: #818181;
     display: block;
     border: none;
@@ -267,16 +276,16 @@
     position: relative;
     display: none;
     background-color: #494949;
-    padding-left: 0px;
-    width: calc(100% + 0px);
-    border: 2px solid white;
+    padding-left: 0rem;
+    width: calc(100% + 0rem);
+    border: .2rem solid white;
     box-sizing: border-box;/* So the width will be 100% + 17px */
     transition: all 0.5s linear;
     user-select: auto;
 }
 .dropdown-container div{
-    word-spacing: 10px;
-    border-bottom: 2px solid white;
+    word-spacing: 1rem;
+    border-bottom: .2rem solid white;
 }
 .dropdown-container a{
     width: fit-content;
@@ -304,33 +313,33 @@
 /* Optional: Style the caret down icon */
 .fa-caret-down {
     float: right;
-    padding-right: 8px;
-    margin:2px 5px;
+    padding-right: .8rem;
+    margin:.2rem .5rem;
 }
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     text-decoration: none;
     position: absolute;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    right: 2.5rem;
+    font-size: 3.6rem;
+    margin-left: 5rem;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;
-    padding: 20px;
+    padding: 2rem;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 45rem) {
     .sidenav {
-        padding-top: 15px;
+        padding-top: 1.5rem;
     }
 
     .sidenav a {
-        font-size: 18px;
+        font-size: 1.8rem;
     }
 }
 /* Navbar container */
@@ -345,10 +354,10 @@
 /* Links inside the navbar */
 .navbars a {
     float: left;
-    font-size: 20px;
-    color: white;
+    font-size: 2rem;
+    color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1.4rem 1.6rem;
     text-decoration: none;
 }
 
@@ -360,11 +369,11 @@
 
 /* Dropdown button */
 .dropdown-menus .dropbtn-menu {
-    font-size: 20px;
+    font-size: 2rem;
     border: none;
     outline: none;
-    color: white;
-    padding: 14px 16px;
+    color: black;
+    padding: 1.4rem 1.6rem;
     background-color: inherit;
     font-family: inherit;
     /* Important for vertical align on mobile phones */
@@ -384,17 +393,17 @@
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    min-width: 16rem;
+    box-shadow: 0rem .8rem 1.6rem 0rem rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-content-menu a {
     float: none;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: black;
-    padding: 12px 16px;
+    padding: 1.2rem 1.6rem;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -409,31 +418,6 @@
 .dropdown-menus:hover .dropdown-content-menu {
     display: block;
 }
-
-.main-body {
-    width: 100%;
-    margin: 50px auto 0 auto;
-    text-align: center;
-    display: block;
-    user-select: none;
-}
-.main-body div{
-    margin: 20px;
-    display: inline-block;
-    width: fit-content;
-    height: fit-content;
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    color: tomato;
-}
-.main-body div a{
-    text-decoration: none;
-}
-
 
 .tabs {
     display: -webkit-box;
@@ -486,4 +470,70 @@
 
 .tabs input[type="radio"]:checked+label+.tab {
     display: block;
+}
+/*###################################
+#############################
+############################
+############################
+############################*/
+/*mirinda boxes*/
+.container-mirinda-boxes {
+    transition: all -.5s linear;
+    padding: 0.4rem 0;
+}
+
+.mirinda-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    grid-gap: 2%;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 1rem;
+}
+
+.mirinda-boxes>div {
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.5s;
+    perspective: 100rem;
+}
+
+.mirinda-boxes>div:before {
+    content: "";
+    top: 0rem;
+    left: -110%;
+    background-color: rgba(192, 192, 192, 0.683);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    transform: skewx(-10deg);
+    transition: all 0.6s;
+}
+
+.mirinda-boxes>div:hover:before {
+    left: 110%;
+}
+
+.mirinda-boxes>div:hover {
+    transform: perspective(100rem) rotateY(10deg);
+}
+
+.mirinda-boxes>div:nth-child(even) {
+    background-color: #f56E00;
+}
+
+.mirinda-boxes>div:nth-child(odd) {
+    background-color: #0504AA;
+}
+
+.mirinda-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
 }
