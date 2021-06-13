@@ -1,383 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>वेद</title>
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="../main.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
-        <!--------jquery--------------->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>वेद</title>
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="../main.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
+  <!--------jquery--------------->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
 
 </head>
+
 <body>
-    <div class="flex">
-        <button class="tablink active" onclick="openPage('mainPage', this, 'red')" > मुख्य पृष्ठ</button>
-        <button class="tablink active" onclick="openPage('rigved', this, 'red')" id="defaultOpen" id="rigveda" name="rigveda">ऋग्वेद</button>
-        <button class="tablink active" onclick="openPage('yajurved', this, 'green')" id="yajurveda" name="yajurveda">यजुर्वेद</button>
-        <button class="tablink active" onclick="openPage('samved', this, 'blue')" id="samveda">सामवेद</button>
-        <button class="tablink active" onclick="openPage('atharvaved', this, 'orange')" id="atharvaveda">अथर्ववेद</button>
-    </div>
-    
-    <div id="mainPage" class="tabcontent">
-        <h3><span style="color:rgb(68, 68, 68);">वेद</span><span>मन्तव्य</span></h3>
+  <div class="flex">
+    <button class="tablink active" onclick="openPage('mainPage', this, 'red')"> मुख्य पृष्ठ</button>
+    <button class="tablink active" onclick="openPage('rigved', this, 'red')" id="defaultOpen" id="rigveda"
+      name="rigveda">ऋग्वेद</button>
+    <button class="tablink active" onclick="openPage('yajurved', this, 'green')" id="yajurveda"
+      name="yajurveda">यजुर्वेद</button>
+    <button class="tablink active" onclick="openPage('samved', this, 'blue')" id="samveda">सामवेद</button>
+    <button class="tablink active" onclick="openPage('atharvaved', this, 'orange')" id="atharvaveda">अथर्ववेद</button>
+  </div>
+
+  <div id="mainPage" class="tabcontent">
+    <h3><span style="color:rgb(68, 68, 68);">वेद</span><span>मन्तव्य</span></h3>
+    <p>
+      <div class="search-bar">
+        <input type="text" placeholder="वेदों में खोजें...">
+        <input type="submit" value="Go">
+      </div>
+      <p>
+  </div>
+  <!-- rigved -->
+  <div id="rigved" name="rigved" class="tabcontent">
+    <div>
+      <div class="boxs">
+        <img src="../img/rigveda.png" alt="rigved" class="ved-img" />
+        <div class="flex-text">
+          <div class="info_box">
+            <p>
+              <div><i class="fa fa-book"></i>वेद: ऋग्वेद </div>
+              <div><i class="fa fa-book"></i>ऋषि: अग्नि</div>
+            </p>
+          </div>
+          <div class="info_box">
+            <p>
+              <div><i class="fa fa-book"></i>मण्डल: 10 </div>
+              <div><i class="fa fa-book"></i>सूक्त: 1028</div>
+            </p>
+          </div>
+          <div class="info_box">
+            <p>
+              <div><i class="fa fa-book"></i> अष्टक: 8 </div>
+              <div><i class="fa fa-book"></i>अध्याय: 64</div>
+              <div><i class="fa fa-book"></i>वर्ग: 2024</div>
+            </p>
+          </div>
+          <div class="info_box">
+            <p>
+              <div><i class="fa fa-book"></i> मण्डल: 10 </div>
+              <div><i class="fa fa-book"></i>अनुवाक: 85</div>
+            </p>
+          </div>
+          <div class="info_box">
+            <p>
+              <div>मन्त्र: 10552</div>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        <h2>ऋग्वेद सम्बंधित जानकारी</h2>
         <p>
-            <div class="search-bar">
-                <input type="text" placeholder="वेदों में खोजें...">
-                <input type="submit" value="Go">
-            </div>
+          इस <strong>ऋग्वेद</strong> से सब पदार्थों की स्तुति होती है अर्थात् ईश्वर ने जिसमें सब पदार्थों के गुणों का
+          प्रकाश किया है, इसलिये
+          विद्वान् लोगों को चाहिये कि ऋग्वेद को प्रथम पढ़के उन मन्त्रों से ईश्वर से लेके पृथिवी-पर्य्यन्त सब पदार्थों को
+          यथावत्
+          जानके संसार में उपकार के लिये प्रयत्न करें।
+
+          <p><strong>ऋग्वेद</strong> शब्द का अर्थ यह है कि जिससे सब पदार्थों के गुणों और स्वभाव का वर्णन
+            किया जाय वह <b>ऋक्</b> वेद अर्थात् जो यह सत्य सत्य ज्ञान का हेतु है, इन दो शब्दों से <b>ऋग्वेद</b> शब्द बनता
+            है।
+          </p>
+
+          <p><b>अग्निमीळे </b> यहां
+            से लेके <b>यथा वः सुसहासति</b> इस अन्त के मन्त्र-पर्यन्त ऋग्वेद में आठ अष्टक और एक एक अष्टक में आठ आठ अध्याय
+            हैं। सब अध्याय
+            मिलके चौसठ होते हैं। और आठों अष्टक के सब वर्ग 2024 दो हजार चौबीस होते हैं। तथा इस में दश मण्डल हैं।
+          </p>
+
+          <p>प्रथम मण्डल में 24 चौबीस अनुवाक, और एकसौ इक्कानवे सूक्त, तथा 1976 एक हजार नौ सौ छहत्तर मन्त्र। दूसरे में 4
+            चार
+            अनुवाक, 43
+            तितालीस सूक्त, और 429 चार सौ उन्तीस मन्त्र। तीसरे में 5 पांच अनुवाक, 62 बासठ सूक्त, और 617 छः सौ सत्रह
+            मन्त्र।
+            चौथे में
+            5 पांच अनुवाक 58 अठ्ठावन सूक्त, 589 पांच सौ नवासी मन्त्र। पांचमें 6 छः अनुवाक 87 सतासी सूक्त, 727 सात सौ
+            सत्ताईस
+            पैंसठ
+            मन्त्र। 6 छठे में छः अनुवाक, 75 पचहत्तर सूक्त, 765 सात सौ पैंसठ मन्त्र। सातमे में 6 छः अनुवाक, 104 एकसौ चार
+            सूक्त, 841
+            आठ सौ इकतालीस मन्त्र। आठमे में 10 दश अनुवाक, 103 एकसौ तीन सूक्त, और 1726 एक हजार सातसौ छब्बीस मन्त्र। नवमे
+            में
+            7
+            सात
+            अनुवाक 114 एकसौ चौदह सूक्त, 1097 और एक हजार सत्तानवे मन्त्र। और दशम मण्डल में 12 बारह अनुवाक, 191 एकसौ
+            इक्कानवे
+            सूक्त,
+            और 1754 एक हजार सातसौ चौअन मन्त्र हैं। तथा दशों मण्डलों में 85 पचासी अनुवाक, 1028 एक हजार अठ्ठाईस सूक्त, और
+            10589 दश
+            हजार पांचसौ नवासी मन्त्र हैं।
+          </p>
+        </p>
+      </div>
+    </div>
+
+    <div class="ved-search-bar">
+      <input type="text" placeholder="ऋग्वेद में खोजें...">
+      <input type="submit" value="Go">
+    </div>
+
+    <div class="option-mantra">
+      <div class="headline">
+        <h3>मन्त्र खोजें</h3>
+      </div>
+      <form role="search-mantra" class="form-inline">
+        <div class="col-md-4">
+          <select name="rig-mandal" id="rig-mandal" class="1-10 rig rig-mandal" onchange="change_sukt(this)">
+            <option value="select" selected disabled>मण्डल चुनें</option>
+            <script>
+              $(function () {
+                var $select = $(".1-10");
+                for (i = 1; i <= 10; i++) {
+                  $select.append($('<option value=' + i + '></option>').val(i).html(i))
+                }
+              });
+            </script>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <!-- sukt-->
+          <select id="rig-sukt" class="option rig-show rig-sukt rig" onchange="change_mantra(this)">
+            <option disabled selected>सूक्त चुनें</option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <select name="rig-mantra" id="rig-mantra" class="rig rig-mantra" onchange="show_mantra(this)">
+            <option disabled selected>मन्त्र चुनें</option>
+          </select>
+        </div>
+      </form>
+    </div>
+  </div>
+<div class="rig_box" id="rig_box">
+  <div class="container">
+    <div class="mantra_info">
+      <div class="m_info">
+        <span class="m-info_keys">
+          देवता:
+          <span class="devta m-info_values" id="devta">
+
+          </span>
+        </span>
+
+        <span class=" m-info_keys">
+          ऋषि:
+          <span class="rishi m-info_values" id="rishi">
+
+          </span>
+        </span>
+
+        <span class="m-info_keys">
+          छन्द:
+          <span class="chhand m-info_values" id="chhand">
+
+          </span>
+        </span>
+
+        <span class="m-info_keys">
+          स्वर:
+          <span class="swar m-info_values" id="swar">
+
+          </span>
+        </span>
+
+      </div>
+    </div>
+
+    <div class="mantra_box">
+      <div id="mantra_hi"></div>
+      <div id="padpath"></div>
+      
+      <div id="mandal_id">
+       
+        <div>
+          <span id="mandal"></span> >
+          <span id="sukt"></span> >
+          <span id="mantra"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- yajurved -->
+  <div id="yajurved" name="yajurved" class="tabcontent">
+    <div>
+      <div class="boxs">
+        <img src="../img/rigveda.png" alt="rigved" class="ved-img" />
+        <div class="flex-text">
+          <div class="info_box">
+            <p>
+              <div><i class="fa fa-book"></i> वेद: यजुर्वेद </div>
+              <div><i class="fa fa-book"></i>ऋषि: वायु</div>
+            </p>
+          </div>
+          <div class="info_box">
+            <p>
+              <div><i class="fa fa-book"></i>अध्याय: 40</div>
+              <div><i class="fa fa-book"></i>मन्त्र :1975</div>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        <h2>यजुर्वेद सम्बंधित जानकारी</h2>
         <p>
+          जो कर्मकांड है, सो विज्ञान का निमित्त और जो विज्ञानकांड है, सो क्रिया से फल देने वाला होता है। कोई जीव ऐसा
+          नहीं
+          है
+          कि जो
+          मन, प्राण, वायु, इन्द्रिय और शरीर के चलाये बिना एक क्षण भर भी रह सके, क्योंकि जीव अल्पज्ञ एकदेशवर्त्ती चेतन
+          है।
+          इसलिये
+          जो ईश्वर ने ऋग्वेद के मन्त्रों से सब पदार्थों के गुणगुणी का ज्ञान और यजुर्वेद के मन्त्रों से सब क्रिया करनी
+          प्रसिद्ध
+          की
+          है, क्योंकि <b>(ऋक्)</b> और <b>(यजुः)</b> इन शब्दों का अर्थ भी यही है कि जिससे मनुष्य लोग ईश्वर से लेके
+          पृथिवीपर्यन्त पदार्थों के
+          ज्ञान से धार्मिक विद्वानों का संग, सब शिल्पक्रिया सहित विद्याओं की सिद्धि, श्रेष्ठ विद्या, श्रेष्ठ गुण वा
+          विद्या
+          का
+          दान,
+          यथायोग्य उक्त विद्या के व्यवहार से सर्वोपकार के अनुकूल द्रव्यादि पदार्थों का खर्च करें, इसलिये इसका नाम
+          <strong>यजुर्वेद</strong> है।
+          <p>
+            इस यजुर्वेद में सब चालीस अध्याय हैं और चालीसों अध्याय के सब मिलके १९७५ (उन्नीस्सौ पचहत्तर) मन्त्र हैं॥
+          </p>
+        </p>
+      </div>
     </div>
-<!-- rigved -->
-    <div id="rigved" name="rigved" class="tabcontent">
-        <div>
-            <div class="boxs">
-                <img src="../img/rigveda.png" alt="rigved" class="ved-img" />
-                <div class="flex-text">
-                    <div class="info_box">
-                        <p>
-                        <div><i class="fa fa-book"></i>वेद: ऋग्वेद </div>
-                        <div><i class="fa fa-book"></i>ऋषि: अग्नि</div>
-                        </p>
-                    </div>
-                    <div class="info_box">
-                        <p>
-                        <div><i class="fa fa-book"></i>मण्डल: 10 </div>
-                        <div><i class="fa fa-book"></i>सूक्त: 1028</div>
-                        </p>
-                    </div>
-                    <div class="info_box">
-                        <p>
-                        <div><i class="fa fa-book"></i> अष्टक: 8 </div>
-                        <div><i class="fa fa-book"></i>अध्याय: 64</div>
-                        <div><i class="fa fa-book"></i>वर्ग: 2024</div>
-                        </p>
-                    </div>
-                    <div class="info_box">
-                        <p>
-                        <div><i class="fa fa-book"></i> मण्डल: 10 </div>
-                        <div><i class="fa fa-book"></i>अनुवाक: 85</div>
-                        </p>
-                    </div>
-                    <div class="info_box">
-                        <p>
-                        <div>मन्त्र: 10552</div>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="description">
-                <h2>ऋग्वेद सम्बंधित जानकारी</h2>
-                <p>
-                    इस <strong>ऋग्वेद</strong> से सब पदार्थों की स्तुति होती है अर्थात् ईश्वर ने जिसमें सब पदार्थों के गुणों का प्रकाश किया है, इसलिये
-                    विद्वान् लोगों को चाहिये कि ऋग्वेद को प्रथम पढ़के उन मन्त्रों से ईश्वर से लेके पृथिवी-पर्य्यन्त सब पदार्थों को यथावत्
-                    जानके संसार में उपकार के लिये प्रयत्न करें। 
-                    
-                    <p><strong>ऋग्वेद</strong> शब्द का अर्थ यह है कि जिससे सब पदार्थों के गुणों और स्वभाव का वर्णन
-                    किया जाय वह <b>ऋक्</b> वेद अर्थात् जो यह सत्य सत्य ज्ञान का हेतु है, इन दो शब्दों से <b>ऋग्वेद</b> शब्द बनता है। 
-                    </p>
-                    
-                    <p><b>अग्निमीळे </b> यहां
-                    से लेके <b>यथा वः सुसहासति</b> इस अन्त के मन्त्र-पर्यन्त ऋग्वेद में आठ अष्टक और एक एक अष्टक में आठ आठ अध्याय हैं। सब अध्याय
-                    मिलके चौसठ होते हैं। और आठों अष्टक के सब वर्ग 2024 दो हजार चौबीस होते हैं। तथा इस में दश मण्डल हैं।
-                    </p>
-
-                    <p>प्रथम मण्डल में 24 चौबीस अनुवाक, और एकसौ इक्कानवे सूक्त, तथा 1976 एक हजार नौ सौ छहत्तर मन्त्र। दूसरे में 4 चार अनुवाक, 43
-                    तितालीस सूक्त, और 429 चार सौ उन्तीस मन्त्र। तीसरे में 5 पांच अनुवाक, 62 बासठ सूक्त, और 617 छः सौ सत्रह मन्त्र। चौथे में
-                    5 पांच अनुवाक 58 अठ्ठावन सूक्त, 589 पांच सौ नवासी मन्त्र। पांचमें 6 छः अनुवाक 87 सतासी सूक्त, 727 सात सौ सत्ताईस पैंसठ
-                    मन्त्र। 6 छठे में छः अनुवाक, 75 पचहत्तर सूक्त, 765 सात सौ पैंसठ मन्त्र। सातमे में 6 छः अनुवाक, 104 एकसौ चार सूक्त, 841
-                    आठ सौ इकतालीस मन्त्र। आठमे में 10 दश अनुवाक, 103 एकसौ तीन सूक्त, और 1726 एक हजार सातसौ छब्बीस मन्त्र। नवमे में 7 सात
-                    अनुवाक 114 एकसौ चौदह सूक्त, 1097 और एक हजार सत्तानवे मन्त्र। और दशम मण्डल में 12 बारह अनुवाक, 191 एकसौ इक्कानवे सूक्त,
-                    और 1754 एक हजार सातसौ चौअन मन्त्र हैं। तथा दशों मण्डलों में 85 पचासी अनुवाक, 1028 एक हजार अठ्ठाईस सूक्त, और 10589 दश
-                    हजार पांचसौ नवासी मन्त्र हैं।
-                    </p>
-                </p>
-            </div>
-        </div>
-
-        <div class="ved-search-bar">
-            <input type="text" placeholder="ऋग्वेद में खोजें...">
-            <input type="submit" value="Go">
-        </div>
-
-        <div class="option-mantra">
-            <div class="headline"><h3>मन्त्र खोजें</h3></div>
-            <form role="search-mantra" class="form-inline">
-                <div class="col-md-4">
-                    <select name="rig-mandal" id="rig-mandal" class="1-10 rig rig-mandal" onchange="change_sukt(this)">
-                        <option value="select" selected disabled>मण्डल चुनें</option>
-                        <script>
-                            $(function () {
-                                var $select = $(".1-10");
-                                for (i = 1; i <= 10; i++) { $select.append($('<option value='+ i +'></option>').val(i).html(i)) }
-                            });
-                        </script>
-                    </select>
-                </div>
-
-                <div class="col-md-4" >
-                    <!-- sukt-->
-                    <select id="rig-sukt" class="option rig-show rig-sukt rig"  onchange="change_mantra(this)">
-                        <option disabled selected>सूक्त चुनें</option>
-                    </select>
-                </div>
-
-                <div class="col-md-4">
-                    <select name="rig-mantra" id="rig-mantra" class="rig rig-mantra"  onchange="show_mantra(this)">
-                        <option disabled selected>मन्त्र चुनें</option>
-                    </select>
-                </div>
-            </form>
-        </div>
-    </div>
-    <p id="demo">
-a
-    </p>
-
-<!-- yajurved -->
-    <div id="yajurved" name="yajurved" class="tabcontent">
-        <div>
-            <div class="boxs">
-                <img src="../img/rigveda.png" alt="rigved" class="ved-img" />
-                <div class="flex-text">
-                    <div class="info_box">
-                        <p>
-                        <div><i class="fa fa-book"></i> वेद: यजुर्वेद </div>
-                        <div><i class="fa fa-book"></i>ऋषि: वायु</div>
-                        </p>
-                    </div>
-                    <div class="info_box">
-                        <p>
-                        <div><i class="fa fa-book"></i>अध्याय: 40</div>
-                        <div><i class="fa fa-book"></i>मन्त्र :1975</div>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="description">
-                <h2>यजुर्वेद सम्बंधित जानकारी</h2>
-                <p>
-                    जो कर्मकांड है, सो विज्ञान का निमित्त और जो विज्ञानकांड है, सो क्रिया से फल देने वाला होता है। कोई जीव ऐसा नहीं है
-                    कि जो
-                    मन, प्राण, वायु, इन्द्रिय और शरीर के चलाये बिना एक क्षण भर भी रह सके, क्योंकि जीव अल्पज्ञ एकदेशवर्त्ती चेतन है।
-                    इसलिये
-                    जो ईश्वर ने ऋग्वेद के मन्त्रों से सब पदार्थों के गुणगुणी का ज्ञान और यजुर्वेद के मन्त्रों से सब क्रिया करनी प्रसिद्ध
-                    की
-                    है, क्योंकि <b>(ऋक्)</b> और <b>(यजुः)</b> इन शब्दों का अर्थ भी यही है कि जिससे मनुष्य लोग ईश्वर से लेके
-                    पृथिवीपर्यन्त पदार्थों के
-                    ज्ञान से धार्मिक विद्वानों का संग, सब शिल्पक्रिया सहित विद्याओं की सिद्धि, श्रेष्ठ विद्या, श्रेष्ठ गुण वा विद्या का
-                    दान,
-                    यथायोग्य उक्त विद्या के व्यवहार से सर्वोपकार के अनुकूल द्रव्यादि पदार्थों का खर्च करें, इसलिये इसका नाम
-                    <strong>यजुर्वेद</strong> है।
-                <p>
-                    इस यजुर्वेद में सब चालीस अध्याय हैं और चालीसों अध्याय के सब मिलके १९७५ (उन्नीस्सौ पचहत्तर) मन्त्र हैं॥
-                </p>
-                </p>
-            </div>
-        </div>
-        <div class="ved-search-bar">
-            <input type="text" placeholder="यजुर्वेद में खोजें...">
-            <input type="submit" value="Go">
-        </div>
-        
-        <div class="option-mantra">
-            <div class="headline">
-                <h3>मन्त्र खोजें</h3>
-            </div>
-            <form action="" method="get" role="search-mantra" class="form-inline">
-                <div class="col-md-4">
-                    <select name="yajurved" id="yaju-adhyay" class="1-40 yaju">
-                        <option value="select" selected disabled>अध्याय चुनें</option>
-                        <script>
-                            $(function () {
-                                var $select = $(".1-40");
-                                for (i = 1; i <= 40; i++) { $select.append($('<option value= '+i+'></option>').val(i).html(i)) }
-                            });
-                        </script>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <select name="yajurved" id="yaju-mantra" class="yaju">
-                        <option value="selected" disabled selected>मन्त्र चुनें</option>
-                    </select>
-                </div>
-            </form>
-        </div>
+    <div class="ved-search-bar">
+      <input type="text" placeholder="यजुर्वेद में खोजें...">
+      <input type="submit" value="Go">
     </div>
 
-<!-- samved -->
-    <div id="samved" name="samved" class="tabcontent">
-        <div>
-            <div class="boxs">
-                <img src="../img/rigveda.png" alt="samved" class="ved-img" />
-                <div class="flex-text">
-                    <div class="info_box">
-                        <p>
-                        <div><i class="fa fa-book"></i> वेद: सामवेद </div>
-                        <div><i class="fa fa-book"></i>ऋषि: आदित्य</div>
-                        </p>
-                    </div>
-                    <div class="info_box">
-                        <p>
-                        <div class="shaakha">कौथोम शाखा:</div>
-                        <div><i class="fa fa-book"></i>(पूर्वार्चिक) मन्त्र:10</div>
-                        <div><i class="fa fa-book"></i>(महानाम्न्यार्चिक) मन्त्र:10</div>
-                        <div><i class="fa fa-book"></i>(उत्तरार्चिकः) - मन्त्र : 1225</div>
-                        </p>
-                    </div>
-                    <div class="info_box">
-                        <p>
-                        <div class="shaakha">रानायाणीय शाखा:</div>
-                        <div><i class="fa fa-book"></i>(पूर्वार्चिक) मन्त्र:10</div>
-                        <div><i class="fa fa-book"></i>(महानाम्न्यार्चिकः) मन्त्र:10</div>
-                        <div><i class="fa fa-book"></i>(उत्तरार्चिकः) - मन्त्र : 1225</div>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="description">
-                <h2>सामवेद सम्बंधित जानकारी</h2>
-                <p>
-                    इस वेद में कुल 1875 मन्त्र संग्रहित हैं। उपासना को प्रधानता देने के कारण चारों वेदों में आकार की दृष्टि से लघुतम सामवेद
-                    का विशिष्ट महत्व है। श्रीमद्भगवद्गीता स्वविभूतियों का उल्लेख करते हुए योगेश्वर श्रीकृष्ण ने स्वयं को वेदों में सामवेद
-                    कहकर इसकी महिमा का मण्डन किया है – <strong>"वेदानां सामवेदोऽस्मि।(श्रीमद्भगवद्गीता 10/22)- वेदों में मैं सामवेद हूँ।</strong>"
-                </p>
-                </p>
-            </div>
+    <div class="option-mantra">
+      <div class="headline">
+        <h3>मन्त्र खोजें</h3>
+      </div>
+      <form action="" method="get" role="search-mantra" class="form-inline">
+        <div class="col-md-4">
+          <select name="yajurved" id="yaju-adhyay" class="1-40 yaju">
+            <option value="select" selected disabled>अध्याय चुनें</option>
+            <script>
+              $(function () {
+                var $select = $(".1-40");
+                for (i = 1; i <= 40; i++) {
+                  $select.append($('<option value= ' + i + '></option>').val(i).html(i))
+                }
+              });
+            </script>
+          </select>
         </div>
-        <div class="ved-search-bar">
-            <input type="text" placeholder="सामवेद में खोजें...">
-            <input type="submit" value="Go">
+        <div class="col-md-4">
+          <select name="yajurved" id="yaju-mantra" class="yaju">
+            <option value="selected" disabled selected>मन्त्र चुनें</option>
+          </select>
         </div>
-        
-        <div class="option-mantra">
-            <div class="headline">
-                <h3>मन्त्र खोजें</h3>
-            </div>
-            <form action="" method="get" role="search-mantra" class="form-inline">
-                <div class="col-md-4">
-                    <select name="saam" id="saam-" class="saam">
-                        <option value="selected" disabled selected>मण्डल चुनें</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <select name="rig-sukt" id="saa" class="saam">
-                        <option value="selected" disabled selected>सूक्त चुनें</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <select name="rig-mantra" id="sa" class="saam">
-                        <option value="selected" disabled selected>मन्त्र चुनें</option>
-                    </select>
-                </div>
-            </form>
+      </form>
+    </div>
+  </div>
+
+  <!-- samved -->
+  <div id="samved" name="samved" class="tabcontent">
+    <div>
+      <div class="boxs">
+        <img src="../img/rigveda.png" alt="samved" class="ved-img" />
+        <div class="flex-text">
+          <div class="info_box">
+            <p>
+              <div><i class="fa fa-book"></i> वेद: सामवेद </div>
+              <div><i class="fa fa-book"></i>ऋषि: आदित्य</div>
+            </p>
+          </div>
+          <div class="info_box">
+            <p>
+              <div class="shaakha">कौथोम शाखा:</div>
+              <div><i class="fa fa-book"></i>(पूर्वार्चिक) मन्त्र:10</div>
+              <div><i class="fa fa-book"></i>(महानाम्न्यार्चिक) मन्त्र:10</div>
+              <div><i class="fa fa-book"></i>(उत्तरार्चिकः) - मन्त्र : 1225</div>
+            </p>
+          </div>
+          <div class="info_box">
+            <p>
+              <div class="shaakha">रानायाणीय शाखा:</div>
+              <div><i class="fa fa-book"></i>(पूर्वार्चिक) मन्त्र:10</div>
+              <div><i class="fa fa-book"></i>(महानाम्न्यार्चिकः) मन्त्र:10</div>
+              <div><i class="fa fa-book"></i>(उत्तरार्चिकः) - मन्त्र : 1225</div>
+            </p>
+          </div>
         </div>
+      </div>
+      <div class="description">
+        <h2>सामवेद सम्बंधित जानकारी</h2>
+        <p>
+          इस वेद में कुल 1875 मन्त्र संग्रहित हैं। उपासना को प्रधानता देने के कारण चारों वेदों में आकार की दृष्टि से
+          लघुतम
+          सामवेद
+          का विशिष्ट महत्व है। श्रीमद्भगवद्गीता स्वविभूतियों का उल्लेख करते हुए योगेश्वर श्रीकृष्ण ने स्वयं को वेदों में
+          सामवेद
+          कहकर इसकी महिमा का मण्डन किया है – <strong>"वेदानां सामवेदोऽस्मि।(श्रीमद्भगवद्गीता 10/22)- वेदों में मैं
+            सामवेद
+            हूँ।</strong>"
+        </p>
+        </p>
+      </div>
+    </div>
+    <div class="ved-search-bar">
+      <input type="text" placeholder="सामवेद में खोजें...">
+      <input type="submit" value="Go">
     </div>
 
-
-<!-- atharvaved -->
-    <div id="atharvaved" name="atharvaved" class="tabcontent">
-        <div>
-            <div class="boxs">
-                <img src="../img/rigveda.png" alt="rigved" class="ved-img" />
-                <div class="flex-text">
-                    <div class="info_box">
-                        <p>
-                        <div><i class="fa fa-book"></i> वेद: अथर्ववेद </div>
-                        <div><i class="fa fa-book"></i>ऋषि: अंगीरा</div>
-                        </p>
-                    </div>
-                    <div class="info_box">
-                        <p>
-                        <div><i class="fa fa-book"></i> काण्ड:20 </div>
-                        <div><i class="fa fa-book"></i>सूक्त: 731</div>
-                        <div><i class="fa fa-book"></i>कुल मन्त्र: 5977</div>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="description">
-                <h2>अथर्ववेद सम्बंधित जानकारी</h2>
-                <p>
-                    अथर्ववेद धर्म, अर्थ, काम और मोक्ष की साधनों की कुन्जी है। जीवन एक सतत संग्राम है। अथर्ववेद जीवन-संग्राम में सफलता
-                    प्राप्त करने के उपाय बताता है।
-                    <p>
-                    अथर्ववेद युद्ध और शान्ति का वेद है। शरीर में शान्ति किस प्रकार रहे, उसके लिए नाना प्रकार की औषधियों का वर्णन इसमें है।
-                    परिवार में शान्ति किस प्रकार रह सकती है, उसके लिए भी दिव्य नुस्खे इसमें हैं। राष्ट्र और विश्व में शान्ति किस प्रकार रह
-                    सकती है, उन उपायों का वर्णन भी इसमें है।
-                    </p>
-                    <p>
-                    यदि कोई देश शान्ति को भंग करना चाहे तो उससे किस प्रकार युद्ध करना, शत्रु के आक्रमणों से अपने को किस प्रकार बचाना और उनके
-                    कुचक्रों को किस प्रकार समाप्त करना, इत्यादि सभी बातों का विशद् वर्णन अथर्ववेद में है।
-                    </p>
-                </p>
-                </p>
-            </div>
+    <div class="option-mantra">
+      <div class="headline">
+        <h3>मन्त्र खोजें</h3>
+      </div>
+      <form action="" method="get" role="search-mantra" class="form-inline">
+        <div class="col-md-4">
+          <select name="saam" id="saam-" class="saam">
+            <option value="selected" disabled selected>मण्डल चुनें</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
         </div>
-        <div class="ved-search-bar">
-            <input type="text" placeholder="अथर्ववेद में खोजें...">
-            <input type="submit" value="Go">
+        <div class="col-md-4">
+          <select name="rig-sukt" id="saa" class="saam">
+            <option value="selected" disabled selected>सूक्त चुनें</option>
+          </select>
         </div>
-        
-        <div class="option-mantra">
-            <div class="headline">
-                <h3>मन्त्र खोजें</h3>
-            </div>
-            <form action="" method="get" role="search-mantra" class="form-inline">
-                <div class="col-md-4">
-                    <select name="atharva" id="atharva-kaand" class="atharva">
-                        <option value="selected" disabled selected>मण्डल चुनें</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <select name="rig-sukt" id="atharva-sukt" class="atharva">
-                        <option value="selected" disabled selected>सूक्त चुनें</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <select name="rig-mantra" id="atharva-mantra" class="atharva">
-                        <option value="selected" disabled selected>मन्त्र चुनें</option>
-                    </select>
-                </div>
-            </form>
+        <div class="col-md-4">
+          <select name="rig-mantra" id="sa" class="saam">
+            <option value="selected" disabled selected>मन्त्र चुनें</option>
+          </select>
         </div>
+      </form>
     </div>
-    
-    <script type="text/javascript" src="../main.js"></script>
-    <script type="text/javascript" src="rig-sukt.js"></script>
+  </div>
+
+
+  <!-- atharvaved -->
+  <div id="atharvaved" name="atharvaved" class="tabcontent">
+    <div>
+      <div class="boxs">
+        <img src="../img/rigveda.png" alt="rigved" class="ved-img" />
+        <div class="flex-text">
+          <div class="info_box">
+            <p>
+              <div><i class="fa fa-book"></i> वेद: अथर्ववेद </div>
+              <div><i class="fa fa-book"></i>ऋषि: अंगीरा</div>
+            </p>
+          </div>
+          <div class="info_box">
+            <p>
+              <div><i class="fa fa-book"></i> काण्ड:20 </div>
+              <div><i class="fa fa-book"></i>सूक्त: 731</div>
+              <div><i class="fa fa-book"></i>कुल मन्त्र: 5977</div>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        <h2>अथर्ववेद सम्बंधित जानकारी</h2>
+        <p>
+          अथर्ववेद धर्म, अर्थ, काम और मोक्ष की साधनों की कुन्जी है। जीवन एक सतत संग्राम है। अथर्ववेद जीवन-संग्राम में
+          सफलता
+          प्राप्त करने के उपाय बताता है।
+          <p>
+            अथर्ववेद युद्ध और शान्ति का वेद है। शरीर में शान्ति किस प्रकार रहे, उसके लिए नाना प्रकार की औषधियों का वर्णन
+            इसमें
+            है।
+            परिवार में शान्ति किस प्रकार रह सकती है, उसके लिए भी दिव्य नुस्खे इसमें हैं। राष्ट्र और विश्व में शान्ति किस
+            प्रकार
+            रह
+            सकती है, उन उपायों का वर्णन भी इसमें है।
+          </p>
+          <p>
+            यदि कोई देश शान्ति को भंग करना चाहे तो उससे किस प्रकार युद्ध करना, शत्रु के आक्रमणों से अपने को किस प्रकार
+            बचाना
+            और
+            उनके
+            कुचक्रों को किस प्रकार समाप्त करना, इत्यादि सभी बातों का विशद् वर्णन अथर्ववेद में है।
+          </p>
+        </p>
+        </p>
+      </div>
+    </div>
+    <div class="ved-search-bar">
+      <input type="text" placeholder="अथर्ववेद में खोजें...">
+      <input type="submit" value="Go">
+    </div>
+
+    <div class="option-mantra">
+      <div class="headline">
+        <h3>मन्त्र खोजें</h3>
+      </div>
+      <form action="" method="get" role="search-mantra" class="form-inline">
+        <div class="col-md-4">
+          <select name="atharva" id="atharva-kaand" class="atharva">
+            <option value="selected" disabled selected>मण्डल चुनें</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <select name="rig-sukt" id="atharva-sukt" class="atharva">
+            <option value="selected" disabled selected>सूक्त चुनें</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <select name="rig-mantra" id="atharva-mantra" class="atharva">
+            <option value="selected" disabled selected>मन्त्र चुनें</option>
+          </select>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../main.js"></script>
+  <script type="text/javascript" src="rig-sukt.js"></script>
 </body>
+
 </html>

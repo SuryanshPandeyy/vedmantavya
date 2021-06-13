@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: content-box;
+    
 }
 
 /* Set height of body and the document to 100% to enable "full page tabs" */
@@ -9,6 +10,7 @@ body,
 html {
     box-sizing: content-box;
     font-family: roboto;
+    font-size: 62.5%;
 }
 
 /* Style tab links */
@@ -29,8 +31,8 @@ html {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 15px 0%;
-    font-size: 17px;
+    padding: 1.5rem 0%;
+    font-size: 1.7rem;
     width: 100%;
 }
 
@@ -43,6 +45,7 @@ html {
     display: none;
     height: 100%;
     flex-direction: column;
+    font-size: 1.5rem;
 }
 
 
@@ -72,12 +75,12 @@ html {
 }
 
 .tabcontent .boxs {
-    border: 2px solid rgb(89, 89, 89);
+    border: .2rem solid rgb(89, 89, 89);
     height: fit-content;
     background-color: blanchedalmond;
-    margin: 10px 20px 40px 10px;
+    margin: 1rem 2rem 4rem 1rem;
     width: fit-content;
-    max-width: 600px;
+    max-width: 60rem;
     float: left;
     transition: all 0.2s linear;
 }
@@ -88,7 +91,7 @@ html {
 
 .ved-img {
     width: 100%;
-    height: 300px;
+    height: 30rem;
 }
 
 #yajurved {
@@ -118,35 +121,35 @@ html {
 
 .search-bar input[type="text"] {
     width: fit-content;
-    height: 40px;
+    height: 4rem ;
     margin: auto;
-    border-radius: 10px;
-    box-shadow: 1px 1px 3px 1.2px rgba(77, 77, 77, 0.77);
-    border: 2px solid rgba(77, 77, 77, 0.77);
-    padding: 0 10px;
-    font-size: 15px;
+    border-radius: 1rem;
+    box-shadow: .1rem .1rem .3rem .12rem rgba(77, 77, 77, 0.77);
+    border: .2rem solid rgba(77, 77, 77, 0.77);
+    padding: 0 1rem;
+    font-size: 1.5rem;
 }
 
 .ved-search-bar input[type="text"] {
     width: fit-content;
-    height: 40px;
+    height: 4rem;
     margin: auto;
-    border-radius: 10px;
-    box-shadow: 1px 1px 3px 1.2px rgba(77, 77, 77, 0.77);
-    border: 2px solid rgba(77, 77, 77, 0.77);
-    padding: 0 10px;
-    font-size: 15px;
+    border-radius: 1rem;
+    box-shadow: .1rem .1rem .3rem .12rem rgba(77, 77, 77, 0.77);
+    border: .2rem solid rgba(77, 77, 77, 0.77);
+    padding: 0 1rem;
+    font-size: 1.5rem;
 }
 
 .search-bar input[type="submit"] {
     background: white;
-    box-shadow: 1px 1px 3px 1.2px rgba(77, 77, 77, 0.77);
-    border: 2px solid rgba(77, 77, 77, 0.77);
-    text-shadow: 1px 1px 3px;
-    padding: 13px;
+    box-shadow: .1rem .1rem .3rem .12rem rgba(77, 77, 77, 0.77);
+    border: .2rem solid rgba(77, 77, 77, 0.77);
+    text-shadow: .1rem .1rem .3rem;
+    padding: 1.3rem;
     margin: auto;
     border-radius: 50%;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: rgb(0, 136, 255);
     cursor: pointer;
@@ -154,13 +157,13 @@ html {
 
 .ved-search-bar input[type="submit"] {
     background: rgb(255, 255, 255);
-    box-shadow: 1px 1px 3px 1.2px rgba(77, 77, 77, 0.77);
-    border: 2px solid rgba(77, 77, 77, 0.77);
-    text-shadow: 1px 1px 3px;
-    padding: 13px;
+    box-shadow: .1rem .1rem .3rem .12rem rgba(77, 77, 77, 0.77);
+    border: .2rem solid rgba(77, 77, 77, 0.77);
+    text-shadow: .1rem .1rem .3rem;
+    padding: 1.3rem;
     margin: auto;
     border-radius: 50%;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: rgb(0, 136, 255);
     cursor: pointer;
@@ -176,7 +179,7 @@ html {
 
 .search-bar input[type=text]::placeholder,
 .ved-search-bar input[type=text]::placeholder {
-    font-size: 15px;
+    font-size: 1.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -189,12 +192,12 @@ html {
 }
 
 .info_box {
-    border-bottom: 2px solid rgb(255, 180, 69);
+    border-bottom: .2rem solid rgb(255, 180, 69);
 }
 
 
 .info_box:last-child {
-    border: 0px;
+    border: 0rem;
 }
 
 
@@ -202,17 +205,17 @@ html {
     width: fit-content;
     height: fit-content;
     font-weight: bold;
-    font-size: 13px;
-    border: 0.1px solid rgba(0, 0, 0, 0);
-    padding: 1px;
-    margin: 0px 50px;
+    font-size: 1.3rem;
+    border: 0.01rem solid rgba(0, 0, 0, 0);
+    padding: 1rem;
+    margin: 0rem 5rem;
     transition: all 0.2s ease-in-out;
-    border-radius: 3px;
+    border-radius: .3rem;
 }
 
 .info_box div.shaakha:first-of-type {
-    border-bottom: 1px solid black;
-    margin-bottom: 10px;
+    border-bottom: .1rem solid black;
+    margin-bottom: 1rem;
 }
 
 .info_box div:hover {
@@ -230,23 +233,23 @@ html {
 
 .description {
     text-align: justify;
-    margin: 20px 20px;
+    margin: 2rem 2rem;
 }
 
 .description h2 {
-    border-bottom: 2px solid saddlebrown;
+    border-bottom: .2rem solid saddlebrown;
 }
 
 .option-mantra {
-    border-radius: 5px;
-    border: 2px solid black;
-    margin: 20px;
-    padding: 10px;
+    border-radius: .5rem;
+    border: .2rem solid black;
+    margin:3rem;
+    padding: 3rem;
 }
 
 .option-mantra .headline h3 {
-    margin: 0 0 20px 10px;
-    border-bottom: 2px solid black;
+    margin: 0 0 1rem 1rem;
+    border-bottom: .2rem solid black;
     width: fit-content;
 }
 
@@ -256,10 +259,10 @@ html {
 .atharva {
     width: 100%;
     height: fit-content;
-    padding: 8px 0;
+    padding: .8rem 0;
     border-radius: 5px;
-    margin-bottom: 10px;
-    border: 1.4px solid rgba(0, 0, 0, 0.531);
+    margin-bottom: 1rem;
+    border: .14rem solid rgba(0, 0, 0, 0.531);
 }
 
 .rig:focus,
@@ -292,9 +295,9 @@ html {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 1rem 1.5rem;
     width: 100%;
-    font-size: 17px;
+    font-size: 1.7rem;
     scroll-snap-align: center;
     cursor:default;
 }
@@ -319,7 +322,94 @@ div.content-box{
     align-items: center;
     justify-items: center;
     background-color: cyan;
-    width: 20px;
-    padding: 20px;
-    margin:10px 5px;
+    width: 2rem;
+    padding: 2rem;
+    margin:1rem .5rem;
+}
+
+.rig_box{
+    display: none;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+.rig_box.show_mantra{
+    display: block;
+    
+}
+.container{
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.mantra_info{
+    height: 5rem;
+    background: rgb(76, 225, 65);
+    display: flex;
+    align-items: center;
+    padding:0 1rem;
+}
+.m_info{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Helvetica Neue";
+    font-size: 1.3rem !important;
+}
+.m_info span{
+    margin: 0 1rem;
+    color: white;
+}
+.m_info>span>span{
+    color: rgb(239, 62, 26);
+}
+.mantra_box{
+    height: 20rem;
+    max-width: 80%;
+    width: 80%;
+    min-width: 80%;
+    margin-top: 2rem;
+    border-top: 3.5rem solid rgb(222, 18, 18) !important;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    font-size:  1.6rem;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+
+}
+.mantra_box #mantra_hi{
+    color: rgb(255, 102, 0);
+        font-family: 'Franklin Gothic Medium',
+        'Arial Narrow',
+        Arial,
+        sans-serif;
+
+}
+.mantra_box #padpath{
+    color: blue;
+    font-weight: bold;
+}
+#mandal_id{
+    width: 100%;
+    position: relative;
+    top: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: red;
+    justify-self: flex-end;
+    padding: 0 1rem;
+}
+#mantra_id span{
+    color: white;
 }

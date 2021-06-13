@@ -218,7 +218,7 @@ html{
     position: fixed;
     /* Stay in place */
     z-index: 1;
-    /* Stay on top */
+    /* Stay on top */ 
     top: 0;
     /* Stay at the top */
     left: 0;
@@ -355,7 +355,7 @@ html{
 .navbars a {
     float: left;
     font-size: 2rem;
-    color: black;
+    color: white;
     text-align: center;
     padding: 1.4rem 1.6rem;
     text-decoration: none;
@@ -372,7 +372,7 @@ html{
     font-size: 2rem;
     border: none;
     outline: none;
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 1.4rem 1.6rem;
     background-color: inherit;
     font-family: inherit;
@@ -384,15 +384,13 @@ html{
 /* Add a red background color to navbar links on hover */
 .navbars div a:hover,
 .dropdown-menus:hover .dropbtn-menu {
-    background-color: red;
-    color: white;
+    color: black;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content-menu {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
     min-width: 16rem;
     box-shadow: 0rem .8rem 1.6rem 0rem rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -407,11 +405,12 @@ html{
     text-decoration: none;
     display: block;
     text-align: left;
+    background-color: white;
 }
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content-menu a:hover {
-    background-color: #ddd;
+    background-color: royalblue;
 }
 
 /* Show the dropdown menu on hover */
