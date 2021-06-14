@@ -12,7 +12,7 @@ html{
     --white_bg: #fff;
 }
 .body{
-    background:linear-gradient(to right, rgb(255,192,158), rgb(255,244,232));
+    background: rgb(255, 238, 211)
 }
 .body.lang:lang(hi){
     display: block;
@@ -33,31 +33,36 @@ html{
     font-size: 3.5rem;
     font-weight: bold;
 }
+.hindi span:nth-child(1){
+    color: rgb(255, 157, 0);
+}
+.hindi span:nth-child(2){
+    color: rgb(156, 133, 133);
+}
+.subtitle{
+    color: rgb(0, 0, 0);
+    font-weight:550;
+    text-align: center;
+    font-size: 1.3rem;
+}
 .search-bar input{
     display: inline-block;
 }
+.search-bar{
+    background: white;
+    border-radius:.6rem;
+}
+.search-bar i{
+    margin: 0 .1rem 0 1rem;
+    color: rgba(0, 0, 0, 0.5);
+}
 .search-bar input[type="text"]{
-    min-width: fit-content;
-    max-width: 50rem;
+    width: 40rem;
+    max-width: 40rem;
     height: 4rem;
-    margin: auto;
-    border-radius:2rem;
     border: 0px solid #fff;
     padding: 0 1rem;
     font-size:1.5rem;
-}
-.search-bar input[type="submit"]{
-    width: fit-content;
-    height: fit-content;
-    background: var(--white_bg);
-    border: 0rem solid #fff;
-    padding:1.3rem;
-    margin: auto;
-    border-radius:50%;
-    font-size:1.5rem;
-    font-weight: bold;
-    color: rgb(0, 136, 255);
-    cursor: pointer;
 }
 .search-bar input[type="text"]:focus,
 .search-bar input[type="submit"]:focus{
@@ -66,6 +71,8 @@ html{
 }
 .search-bar input[type=text]::placeholder{
     font-size:1.5rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
     vertical-align: middle;
     display:flex;
     flex-direction: row;
@@ -206,14 +213,14 @@ html{
 .menu-icon div {
     width: 3.5rem;
     height: .5rem;
-    background-color: black;
+    background-color: rgb(255, 123, 0);
     margin: .6rem 0;
 }
 /* The side navigation menu */
 .sidenav {
     height: 100%;
     /* 100% Full-height */
-    width: 0;
+    width: 30rem;
     /* 0 width - change this with JavaScript */
     position: fixed;
     /* Stay in place */
@@ -221,8 +228,8 @@ html{
     /* Stay on top */ 
     top: 0;
     /* Stay at the top */
-    left: 0;
-    background-color: #111;
+    left: -30rem;
+    background-color: rgba(255, 136, 0, 0.85);
     /* Black*/
     overflow-x: hidden;
     scrollbar-width: none;
@@ -241,7 +248,7 @@ html{
     padding: .6rem .8rem .6rem 1.6rem;
     text-decoration: none;
     font-size: 2rem;
-    color: #c5c5c5;
+    color: #ffffff;
     display: block;
     transition: 0.3s;
 }
@@ -249,7 +256,7 @@ html{
     padding: .6rem .8rem .6rem 1.6rem;
     text-decoration: none;
     font-size: 2rem;
-    color: #818181;
+    color: #ffffff;
     display: block;
     border: none;
     background: none;
@@ -275,17 +282,16 @@ html{
 .dropdown-container {
     position: relative;
     display: none;
-    background-color: #494949;
+    background-color: #ffffff;
     padding-left: 0rem;
     width: calc(100% + 0rem);
-    border: .2rem solid white;
     box-sizing: border-box;/* So the width will be 100% + 17px */
     transition: all 0.5s linear;
     user-select: auto;
 }
 .dropdown-container div{
     word-spacing: 1rem;
-    border-bottom: .2rem solid white;
+    
 }
 .dropdown-container a{
     width: fit-content;
@@ -304,7 +310,8 @@ html{
 
 .ved{
     z-index: 3;
-    background-color: #1a1a1a;
+    background-color: transparent;
+    margin: 0 3rem;
 }
 .brahman-granth{
     z-index: 2;
@@ -349,13 +356,17 @@ html{
     font-family: Arial;
     width: 100%;
     height: fit-content;
+    
+}
+.navbars>div>a, .navbars button {
+    font-weight: 550;
 }
 
 /* Links inside the navbar */
 .navbars a {
     float: left;
     font-size: 2rem;
-    color: white;
+    color: rgb(227, 88, 8);
     text-align: center;
     padding: 1.4rem 1.6rem;
     text-decoration: none;
@@ -372,7 +383,7 @@ html{
     font-size: 2rem;
     border: none;
     outline: none;
-    color: rgb(255, 255, 255);
+    color: rgb(277, 88, 8);
     padding: 1.4rem 1.6rem;
     background-color: inherit;
     font-family: inherit;
@@ -482,25 +493,28 @@ html{
 }
 
 .mirinda-boxes {
+    margin: 3rem auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-    grid-gap: 2%;
-    justify-content: center;
-    align-items: center;
-    margin: 3rem 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 4%;
+    place-items: center;
+    place-content: center;
 }
 
 .mirinda-boxes>div {
+    display: inline-block;
     position: relative;
-    width: 100%;
+    width: 25rem;
     height: 20rem;
     border-radius: 1.5rem;
-    padding: 1rem;
     color: white;
     cursor: pointer;
     overflow: hidden;
     transition: all 0.5s;
     perspective: 100rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 
 .mirinda-boxes>div:before {
@@ -519,16 +533,12 @@ html{
     left: 110%;
 }
 
-.mirinda-boxes>div:hover {
-    transform: perspective(100rem) rotateY(10deg);
-}
-
 .mirinda-boxes>div:nth-child(even) {
-    background-color: #f56E00;
+    background-color: #ffffff;
 }
 
 .mirinda-boxes>div:nth-child(odd) {
-    background-color: #0504AA;
+    background-color: #ffffff;
 }
 
 .mirinda-heading {
